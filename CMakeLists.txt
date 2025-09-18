@@ -17,9 +17,64 @@ qt_add_qml_module(appDrinkBar
     VERSION 1.0
     QML_FILES
         Main.qml
-        RESOURCES
-            assets/image/cool-drink_1.png
-            assets/image/hot-drink_1.png
+    RESOURCES
+        Ui/assets/7up.png
+        Ui/assets/7up-glass.png
+        Ui/assets/back.png
+        Ui/assets/banana.png
+        Ui/assets/blueberry.png
+        Ui/assets/cafe-creme.png
+        Ui/assets/cappuccino.png
+        Ui/assets/cappuccino-180.png
+        Ui/assets/cappuccino-430.png
+        Ui/assets/choco-180.png
+        Ui/assets/coca-cola.png
+        Ui/assets/cocacola-glass.png
+        Ui/assets/cocacola-zero.png
+        Ui/assets/coca-cola-zero-glass.png
+        Ui/assets/coffeemilk-180.png
+        Ui/assets/cold-water-180.png
+        Ui/assets/cool-drink.png
+        Ui/assets/cup-icon.png
+        Ui/assets/decaf-180.png
+        Ui/assets/decaffe.png
+        Ui/assets/espresso.png
+        Ui/assets/fanta.png
+        Ui/assets/fanta-glass.png
+        Ui/assets/fresh-juice.png
+        Ui/assets/fruit-mocktail.png
+        Ui/assets/fruit-punch.png
+        Ui/assets/hot-chocolate.png
+        Ui/assets/hot-drink.png
+        Ui/assets/hot-water.png
+        Ui/assets/hot-water-180.png
+        Ui/assets/icons8-check-100.png
+        Ui/assets/jug-coffee-180.png
+        Ui/assets/jug-ss-180.png
+        Ui/assets/latte-macchiato.png
+        Ui/assets/latte-machiato-180.png
+        Ui/assets/lemon.png
+        Ui/assets/lemon-glass.png
+        Ui/assets/lychee.png
+        Ui/assets/mango.png
+        Ui/assets/milk-tea.png
+        Ui/assets/MpCodingDP_Small.png
+        Ui/assets/orange.png
+        Ui/assets/pepsi.png
+        Ui/assets/pepsi-glass.png
+        Ui/assets/plan-tea.png
+        Ui/assets/porcelain-cup-180.png
+        Ui/assets/restart.png
+        Ui/assets/ristretto-180.png
+        Ui/assets/sprite.png
+        Ui/assets/sprite-glass.png
+        Ui/assets/start.png
+        Ui/assets/strawberry.png
+        Ui/assets/tea-180.png
+        Ui/assets/up-arrow.png
+        QML_FILES Ui/assets/AllDrinks.json
+        QML_FILES HotColdSelectScreen.qml
+
 
 )
 

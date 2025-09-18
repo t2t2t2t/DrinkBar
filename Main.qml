@@ -2,7 +2,7 @@ import QtQuick
 
 Window {
     width: 800
-    height: 400
+    height: 480
     visible: true
     title: qsTr("Drik Bar")
     color: "#1A1A1A"
@@ -62,14 +62,15 @@ Window {
                 top: parent.top
                 bottom: parent.bottom
             }
+
             color: "transparent"
             width: parent.width * 0.5
             Image {
                 id: hotBtnImage
-                source: "assets/image/hot-drink_1.png"
+                source: "Ui/assets/hot-drink.png"
                 anchors {
                     top: parent.top
-                    topMargin: 30
+                    topMargin: 50
                     horizontalCenter: parent.horizontalCenter
                 }
                 width: 256
@@ -79,7 +80,8 @@ Window {
                 text: "HOT"
                 color: "#EC593B"
                 anchors {
-                    bottom: parent.bottom
+                    top: hotBtnImage.bottom
+                    left: hotBtnImage.left
                     //verticalCenter: parent.verticalCenter
                     horizontalCenter: parent.horizontalCenter
                 }
