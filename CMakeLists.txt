@@ -5,6 +5,7 @@ project(DrinkBar VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -78,6 +79,7 @@ qt_add_qml_module(appDrinkBar
         QML_FILES Ui/items/DrinkCustomItem.qml
         QML_FILES DrinkListScreen.qml
         QML_FILES SideSelectScreen.qml
+        SOURCES justfile.h justfile.cpp
 
 
 )
@@ -96,6 +98,7 @@ set_target_properties(appDrinkBar PROPERTIES
 target_link_libraries(appDrinkBar
     PRIVATE Qt6::Quick
 )
+target_link_libraries(appDrinkBar PRIVATE Qt6::Core)
 
 include(GNUInstallDirs)
 install(TARGETS appDrinkBar
