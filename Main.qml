@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Controls
 
 Window {
     width: 800
@@ -21,10 +22,11 @@ Window {
         Text {
             id: dataTimeText
             anchors {
-                left: topLineReact.left
+                left: parent.left
                 verticalCenter: parent.verticalCenter
             }
             text: "07 Jul 2025 | 10:40 AM"
+            font.family: "Segoe UI Emoji"
             color: "white"
             font {
                 pixelSize: 15
@@ -44,74 +46,10 @@ Window {
         }
     }
 
-    Rectangle {
-        id: hotCooldSelectScreen
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            topMargin: 30
-            bottomMargin: 30
-        }
-        width: parent.width
-        color: "transparent"
-        Rectangle {
-            id: hotButtonRect
-            anchors {
-                left: parent.left
-                verticalCenter: parent.verticalCenter
-                top: parent.top
-                bottom: parent.bottom
-            }
-
-            color: "transparent"
-            width: parent.width * 0.5
-            Image {
-                id: hotBtnImage
-                source: "Ui/assets/hot-drink.png"
-                anchors {
-                    top: parent.top
-                    topMargin: 50
-                    horizontalCenter: parent.horizontalCenter
-                }
-                width: 256
-                height: 256
-            }
-            Text {
-                text: "HOT"
-                color: "#EC593B"
-                anchors {
-                    top: hotBtnImage.bottom
-                    left: hotBtnImage.left
-                    //verticalCenter: parent.verticalCenter
-                    horizontalCenter: parent.horizontalCenter
-                }
-                font {
-                    pixelSize: 64
-                }
-            }
-        }
-        Rectangle {
-            id: coolButtonRect
-            anchors {
-                right: parent.right
-                verticalCenter: parent.verticalCenter
-                top: parent.top
-                bottom: parent.bottom
-            }
-            color: "transparent"
-            width: parent.width * 0.5
-            Image {
-                id: collBtnImage
-                source: "assets/image/cool-drink_1.png"
-                anchors {
-                    top: parent.top
-                    topMargin: 50
-                    horizontalCenter: parent.horizontalCenter
-                }
-                width: 256
-                height: 256
-            }
-        }
+    StackView {
+        id: stackView
+        anchors.fill: parent
+        initialItem: "HotColdSelectScreen.qml"
     }
 
     Rectangle {

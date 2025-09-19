@@ -72,8 +72,11 @@ qt_add_qml_module(appDrinkBar
         Ui/assets/strawberry.png
         Ui/assets/tea-180.png
         Ui/assets/up-arrow.png
-        QML_FILES Ui/assets/AllDrinks.json
-        QML_FILES HotColdSelectScreen.qml
+    QML_FILES
+        Ui/assets/AllDrinks.json
+        HotColdSelectScreen.qml
+        QML_FILES Ui/items/DrinkCustomItem.qml
+        QML_FILES DrinkListScreen.qml
 
 
 )
