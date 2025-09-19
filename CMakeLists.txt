@@ -77,6 +77,7 @@ qt_add_qml_module(appDrinkBar
         HotColdSelectScreen.qml
         QML_FILES Ui/items/DrinkCustomItem.qml
         QML_FILES DrinkListScreen.qml
+        QML_FILES SideSelectScreen.qml
 
 
 )
