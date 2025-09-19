@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Quick)
 find_package(Qt6 REQUIRED COMPONENTS Core)
+find_package(Qt6 REQUIRED COMPONENTS Core)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
@@ -73,13 +74,18 @@ qt_add_qml_module(appDrinkBar
         Ui/assets/strawberry.png
         Ui/assets/tea-180.png
         Ui/assets/up-arrow.png
+        Ui/assets/girl.jpg
+
     QML_FILES
         Ui/assets/AllDrinks.json
         HotColdSelectScreen.qml
         QML_FILES Ui/items/DrinkCustomItem.qml
         QML_FILES DrinkListScreen.qml
         QML_FILES SideSelectScreen.qml
+
         SOURCES justfile.h justfile.cpp
+        SOURCES testqml.h testqml.cpp
+        QML_FILES GirlAva.qml
 
 
 )
@@ -98,6 +104,7 @@ set_target_properties(appDrinkBar PROPERTIES
 target_link_libraries(appDrinkBar
     PRIVATE Qt6::Quick
 )
+target_link_libraries(appDrinkBar PRIVATE Qt6::Core)
 target_link_libraries(appDrinkBar PRIVATE Qt6::Core)
 
 include(GNUInstallDirs)
